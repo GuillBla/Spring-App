@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.emse.spring'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.6'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools:2.5.6'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.6'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // libs to use JPA in your project
+    implementation 'com.h2database:h2' // libs to use a H2 database
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+}
+
+test {
+    useJUnitPlatform()
+}
